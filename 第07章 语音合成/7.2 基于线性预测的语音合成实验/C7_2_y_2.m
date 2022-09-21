@@ -1,6 +1,6 @@
 %实验要求二：基于线性预测系数和基音参数的语音合成实验
 clear all; clc; close all;
-[xx, fs, bits] = wavread('C7_2_y.wav');           % 读入数据文件
+[xx, fs] = audioread('C7_2_y.wav');           % 读入数据文件
 xx=xx-mean(xx);                           % 去除直流分量
 x=xx/max(abs(xx));                        % 归一化
 N=length(x);                              % 数据长度

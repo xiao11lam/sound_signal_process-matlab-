@@ -9,7 +9,6 @@ function [F,Bw,U]=Formant_Root(u,p,fs,n_frmnt)
 a=lpc(u,p);                                 % 求出LPC系数
 U=lpcar2pf(a,255);                          % 由LPC系数求出功率谱曲线
 df=fs/512;                                  % 频率分辨率
-
 const=fs/(2*pi);                            % 常数  
 rts=roots(a);                               % 求根
 k=1;                                        % 初始化
